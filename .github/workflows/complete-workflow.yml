@@ -1,11 +1,12 @@
 name: Build code, run unit test, run SAST, SCA, DAST security scans
-on: 
-  push: [ master ]
+push:
+    branches:
+      - master
 
 jobs:
   build:
-    enviornment: testing
     runs-on: ubuntu-latest
+    enviornment: testing
     name: Run unit tests and SAST scan on the source code 
     steps:
     - uses: actions/checkout@v2
