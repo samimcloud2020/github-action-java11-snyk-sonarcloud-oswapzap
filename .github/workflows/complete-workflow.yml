@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: testing
     name: Run unit tests and SAST scan on the source code 
     steps:
     - name: checkout code
